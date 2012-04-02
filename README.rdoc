@@ -1,6 +1,6 @@
-= mandrill
+= Mandril
 
-Description goes here.
+Coming Soon. A ruby gem for interacting with the Mandrill API.
 
 == Contributing to mandrill
  
