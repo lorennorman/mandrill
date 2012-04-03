@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "mandrill"
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brian Getting"]
-  s.date = "2012-04-02"
+  s.date = "2012-04-03"
   s.description = "Ruby gem for interacting with the Mandrill API."
   s.email = "brian@terra-firma-design.com"
   s.extra_rdoc_files = [
@@ -19,14 +19,19 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".rspec",
+    ".rvmrc",
     "Gemfile",
     "Gemfile.lock",
+    "Guardfile",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
     "lib/mandrill.rb",
-    "spec/mandrill_spec.rb",
+    "lib/mandrill/api.rb",
+    "mandrill.gemspec",
+    "spec/mandrill/fixtures/error.json",
+    "spec/mandrill/mandrill_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/terra-firma/mandrill"
@@ -39,24 +44,33 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, [">= 2.8.0"])
-      s.add_development_dependency(%q<rdoc>, [">= 3.12"])
+      s.add_runtime_dependency(%q<httpi>, [">= 0"])
+      s.add_runtime_dependency(%q<json>, [">= 0"])
       s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
+      s.add_development_dependency(%q<fakeweb>, [">= 1.3.0"])
+      s.add_development_dependency(%q<guard-rspec>, [">= 0.7.0"])
       s.add_development_dependency(%q<jeweler>, [">= 1.8.3"])
       s.add_development_dependency(%q<simplecov>, [">= 0.6.1"])
+      s.add_development_dependency(%q<rspec>, [">= 2.8.0"])
     else
-      s.add_dependency(%q<rspec>, [">= 2.8.0"])
-      s.add_dependency(%q<rdoc>, [">= 3.12"])
+      s.add_dependency(%q<httpi>, [">= 0"])
+      s.add_dependency(%q<json>, [">= 0"])
       s.add_dependency(%q<bundler>, [">= 1.0.0"])
+      s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
+      s.add_dependency(%q<guard-rspec>, [">= 0.7.0"])
       s.add_dependency(%q<jeweler>, [">= 1.8.3"])
       s.add_dependency(%q<simplecov>, [">= 0.6.1"])
+      s.add_dependency(%q<rspec>, [">= 2.8.0"])
     end
   else
-    s.add_dependency(%q<rspec>, [">= 2.8.0"])
-    s.add_dependency(%q<rdoc>, [">= 3.12"])
+    s.add_dependency(%q<httpi>, [">= 0"])
+    s.add_dependency(%q<json>, [">= 0"])
     s.add_dependency(%q<bundler>, [">= 1.0.0"])
+    s.add_dependency(%q<fakeweb>, [">= 1.3.0"])
+    s.add_dependency(%q<guard-rspec>, [">= 0.7.0"])
     s.add_dependency(%q<jeweler>, [">= 1.8.3"])
     s.add_dependency(%q<simplecov>, [">= 0.6.1"])
+    s.add_dependency(%q<rspec>, [">= 2.8.0"])
   end
 end
 
