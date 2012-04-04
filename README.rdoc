@@ -39,7 +39,7 @@ As you can see, we are saving the key that Mandrill returns for the currently lo
 
 === Interacting with the API
 
-Once you have a valid API key (your own {account password}[https://mandrillapp.com/settings] works) you can easily interact with the {Mandrill API}[http://mandrillapp.com/api/docs/index.html] by passing in a hash:
+Once you have a valid API key (your own {account password}[https://mandrillapp.com/settings] works) you can easily interact with the {Mandrill API}[http://mandrillapp.com/api/docs/index.html] by passing in arguments as a hash:
 
   m = Mandrill::API.new('api-key')
   m.users :ping
