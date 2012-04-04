@@ -33,7 +33,7 @@ To start with, you will need a {Mandrill account}[http://help.mandrill.com/custo
 
 === Register Your App
 
-{Login to your Mandrill account}[https://mandrillapp.com] and click "{register a new app}[https://mandrillapp.com/app/register]" on the "Settings > Applications" page. Once your app is registered, you will get an "App Authentication ID", which we refer to in this document at the "App ID". You're now ready to get started.
+{Login to your Mandrill account}[https://mandrillapp.com] and click "{register a new app}[https://mandrillapp.com/app/register]" on the "Settings > Applications" page. Once your app is registered, you will get an "App Authentication ID", and you're now ready to get started.
 
 === Connect Your App
 
