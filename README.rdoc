@@ -8,6 +8,27 @@ Mandrill is a Ruby gem that provides a wrapper for interacting with the {Mandril
 
 == Usage
 
+=== Interacting with the API
+
+Once you have a valid API key (user either your {account password}[https://mandrillapp.com/settings] or see the section below about OAuth) you can easily interact with the {Mandrill API}[http://mandrillapp.com/api/docs/index.html] by passing in arguments as a hash:
+
+  m = Mandrill::API.new('api-key')
+  m.users :ping
+  m.users :senders
+  # Methods with dashes shouldn't be passed in as symbols
+  m.users 'disable-sender', {:domain => "exampledomain.com"}
+  m.users 'verify-sender', {:email => 'test@exampledomain.com'}
+  m.messages :send {:message => {:html => "HTML message text", :text => "message text"}...}
+
+=== Errors
+
+When an error is received an instance of <code>Mandrill::API::Error</code> will be returned so that you can rescue accordingly:
+
+  rescue Mandrill::API::Error > error
+    ...
+
+=== OAuth
+
 To start with, you will need a {Mandrill account}[http://help.mandrill.com/customer/portal/articles/456476-setup-and-general-information] as a developer so that you can register your app. People that want to use your application will also need to a {create a Mandrill account}[http://help.mandrill.com/customer/portal/articles/456476-setup-and-general-information] (obviously) as well.
 
 === Register Your App
@@ -35,26 +56,6 @@ Once authorized successfully, a POST request will be sent to the +redirect_url+ 
   end
 
 As you can see, we are saving the key that Mandrill returns for the currently logged in user, and we have successfully connected this user account to Mandrill.
-
-
-=== Interacting with the API
-
-Once you have a valid API key (your own {account password}[https://mandrillapp.com/settings] works) you can easily interact with the {Mandrill API}[http://mandrillapp.com/api/docs/index.html] by passing in arguments as a hash:
-
-  m = Mandrill::API.new('api-key')
-  m.users :ping
-  m.users :senders
-  # Methods with dashes shouldn't be passed in as symbols
-  m.users 'disable-sender', {:domain => "exampledomain.com"}
-  m.users 'verify-sender', {:email => 'test@exampledomain.com'}
-  m.messages :send {:message => {:html => "HTML message text", :text => "message text"}...}
-
-=== Errors
-
-When an error is received an instance of <code>Mandrill::API::Error</code> will be returned so that you can rescue accordingly:
-
-  rescue Mandrill::API::Error > error
-    ...
 
 == Contributing to Mandrill
  
