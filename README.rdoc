@@ -29,7 +29,9 @@ When an error is received an instance of <code>Mandrill::API::Error</code> will 
 
 == OAuth
 
-You will need a {Mandrill account}[http://help.mandrill.com/customer/portal/articles/456476-setup-and-general-information] as a developer so that you can register your app.
+This is for advanced users only! Most (> 99%) developers will only care about the API, and that is entirely handled by the description above. OAuth support is only for companies building an email-oriented service who would like to do so atop Mandrill. If this is you, read on...
+
+You will need a {Mandrill account}[http://help.mandrill.com/customer/portal/topics/214457-getting-started/articles] as a developer so that you can register your app.
 
 === Register Your App
 
