@@ -10,7 +10,7 @@ Mandrill is a Ruby gem that provides a wrapper for interacting with the {Mandril
 
 === Interacting with the API
 
-Once you have a valid API key (user either your {account password}[https://mandrillapp.com/settings] or see the section below about OAuth) you can easily interact with the {Mandrill API}[http://mandrillapp.com/api/docs/index.html] by passing in arguments as a hash:
+Once you have a valid API key (either your {account password}[https://mandrillapp.com/settings] or OAuth token) you can easily interact with the {Mandrill API}[http://mandrillapp.com/api/docs/index.html] by passing in arguments as a hash:
 
   m = Mandrill::API.new('api-key')
   m.users :ping
