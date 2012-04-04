@@ -29,7 +29,7 @@ When an error is received an instance of <code>Mandrill::API::Error</code> will 
 
 == OAuth
 
-To start with, you will need a {Mandrill account}[http://help.mandrill.com/customer/portal/articles/456476-setup-and-general-information] as a developer so that you can register your app. People that want to use your application will also need to a {create a Mandrill account}[http://help.mandrill.com/customer/portal/articles/456476-setup-and-general-information] (obviously) as well.
+You will need a {Mandrill account}[http://help.mandrill.com/customer/portal/articles/456476-setup-and-general-information] as a developer so that you can register your app.
 
 === Register Your App
 
